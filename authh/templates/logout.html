@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+{% block head %}
+  <title>{% block title %}Logout{% endblock %}</title>
+  {{ block.super}}
+{% endblock %}
+
+{% block content %}
+        <div class="container">
+          <div class="row pb-5">
+                  <div class="col-8 col-auto pb-5 mb-5 pl-5" style="margin-top:18%;margin-left:30%;padding-right:30%;">
+                        <h1>Successfully Logout</h1>
+                      <a href="http://127.0.0.1:8000/accounts/login/" class="btn btn-primary">Go To Login Page</a>
+                    </form>
+                {# </div> #}
+
+              </div>
+          </div>
+        </div>
+
+{% endblock %}

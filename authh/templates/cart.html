@@ -1,0 +1,18 @@
+{% extends 'shop/base.html' %}
+{% block content %} 
+    <div id="subheader">
+        <div class="cart">
+             {% with total_items=cart|length %}
+                {% if cart|length > 0 %}
+                    Your Cart:&nbsp 
+                    <a href="{% url 'cart:cart_detail' %}">
+                        {{total_items}} Item{{total_items|pluralize}}&nbsp
+                        Rs.{{ cart.get_total_price }}
+                    </a>
+                {% else %}
+                    Your Cart is empty
+                {% endif %}
+             {% endwith %}   
+        </div>
+    </div>
+{% endblock %}

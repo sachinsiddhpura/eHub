@@ -1,0 +1,26 @@
+{% extends 'shop/base.html' %}
+{% block head %}
+  <title>{% block title %}Login{% endblock %}</title>
+  {{ block.super}}
+{% endblock %}
+{% block content %}
+        <div class="container">
+          <div class="row pb-5">
+                  <div class="col-8 col-auto pb-5 mb-5 pl-5" style="margin-top:18%;margin-left:30%;padding-right:30%;">
+                    {# <div class="col"> #}
+                    <form method="post" >
+                      <div class='text-center '>
+                        <h1 >{{ title }}</h1>
+                      </div>
+                      {% csrf_token %}
+                          {{ form }}
+                      <button class="btn btn-primary" style="margin-left:37%;margin-top:10px;">Submit</button>
+                      </form>
+                      <p>If You Don't Have Account Then Create Your Account <a class="btn btn-dark" href="{% url 'authh:register' %}">Register</a></p>
+                {# </div> #}
+
+              </div>
+          </div>
+        </div>
+
+{% endblock %}

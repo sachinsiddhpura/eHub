@@ -1,0 +1,25 @@
+{% extends 'shop/base.html' %}
+{% block head %}
+  <title>{% block title %}Contact{% endblock %}</title>
+  {{ block.super}}
+{% endblock %}
+{% block content %}
+        <div class="container">
+          <div class="row pb-5">
+                  <div class="col-8 col-auto pb-5 mb-5 pl-5" style="margin-top:5%;margin-left:15%;padding-right:15%;">
+                    <div class="col">
+                    <form method="post" >
+                      <div class='text-center '>
+                        <h1 >{{ title }}</h1>
+                      </div>
+                      {% csrf_token %}
+                          {{ form }}
+                      <button class="btn btn-default offset-sm-3" style="margin-left:37%;margin-top:10px;">Submit</button>
+                      </form>
+                 </div> 
+
+              </div>
+          </div>
+        </div>
+
+{% endblock %}
